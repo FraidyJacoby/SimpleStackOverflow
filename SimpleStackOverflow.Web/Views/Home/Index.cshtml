@@ -1,0 +1,12 @@
+﻿@using SimpleStackOverflow.Data;
+@model IndexViewModel
+
+<div class="row" style="margin-top:40px;">
+    @foreach(Question q in Model.Questions)
+    {
+        <div class="col-md-6 col-md-offset-6 well">
+            <a href="/home/viewQuestion?questionId=@q.Id">@q.Title</a>
+            <p>@q.Text</p>
+        </div>
+    }
+</div>

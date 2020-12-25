@@ -1,0 +1,15 @@
+﻿@model AskAQuestionViewModel
+
+<div class="row">
+    <h4 class="col-offset-md-6">Ask a question!</h4>
+    <div class="col-md-6 col-offset-md-6 well" style="margin-top:50px;">
+        <form method="post" action="/home/addquestion">
+            <input type="text" placeholder="Title" name="title" class="form-control" />
+            <input type="text" name="tagString" placeholder="Enter tags separated a space." class="form-control"/>
+            <textarea placeholder="Text" name="text" class="form-control" rows="7" style="margin-top:20px;"></textarea>
+            <input type="hidden" name="date" value="@DateTime.Now" />
+            <input type="hidden" name="userId" value="@Model.User.Id" />
+            <button class="btn btn-primary" style="margin-top:20px;">Submit</button>
+        </form>
+    </div>
+</div>

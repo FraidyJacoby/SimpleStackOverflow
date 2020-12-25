@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30517.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleStackOverflow.Web", "SimpleStackOverflow.Web\SimpleStackOverflow.Web.csproj", "{454CF09D-6838-4E49-A597-CA9E90215C7E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleStackOverflow.Data", "SimpleStackOverflow.Data\SimpleStackOverflow.Data.csproj", "{EC5E0824-8D0A-4E46-B6EC-6B512ABF842F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{454CF09D-6838-4E49-A597-CA9E90215C7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{454CF09D-6838-4E49-A597-CA9E90215C7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{454CF09D-6838-4E49-A597-CA9E90215C7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{454CF09D-6838-4E49-A597-CA9E90215C7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC5E0824-8D0A-4E46-B6EC-6B512ABF842F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC5E0824-8D0A-4E46-B6EC-6B512ABF842F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC5E0824-8D0A-4E46-B6EC-6B512ABF842F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC5E0824-8D0A-4E46-B6EC-6B512ABF842F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6B57309B-24B9-41B0-A260-8435DC859DD1}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,54 @@
+﻿@using SimpleStackOverflow.Data
+@model ViewQuestionViewModel
+
+<div class="row">
+    <div class="col-md-9 col-offset-md-3 well">
+        <h2 class="question" data-question-id="@Model.Question.Id">@Model.Question.Title</h2>
+        <h5>Asked by: @Model.Question.User.Name</h5>
+        <br />
+        <h5>"@Model.Question.Text"</h5>
+        <br />
+        <h6>
+            @if (Model.Question.QuestionTags != null)
+            {
+                @foreach (QuestionTag qt in Model.Question.QuestionTags)
+                {
+                    @($"{qt.Tag.Title} ")
+                }
+            }
+        </h6>
+        <br />
+
+        <h4><span id="likes-count">@Model.Question.Likes.Count</span> likes</h4>
+        <br />
+
+        @if (Model.UserIsLoggedIn)
+        {
+            
+            <button class="btn btn-danger" id="like-button" data-user-id="@Model.User.Id">Like</button>
+
+            <form method="post" action="/home/addanswer">
+                <div class="col-md-8 col-md-offset-4 well" style="margin-top:30px;">
+                    <textarea placeholder="Answer the question" name="text" rows="5" class="form-control" style="margin-bottom:10px;"></textarea>
+                    <input type="hidden" name="userId" value="@Model.Question.User.Id" />
+                    <input type="hidden" name="questionId" value="@Model.Question.Id" />
+                    <button class="btn btn-danger">Submit Answer</button>
+                </div>
+            </form>
+        }
+
+        @if (Model.Question.Answers != null)
+        {
+            @foreach (Answer a in Model.Question.Answers)
+            {
+                <div class="col-md-6 col-offset-md-6 well">
+                    <h6>Answered by @a.Question.User.Name</h6>
+                    <h5>@a.Text</h5>
+                </div>
+            }
+        }
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/js/ViewQuestion.js"></script> }
